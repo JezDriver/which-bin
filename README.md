@@ -5,7 +5,7 @@ A little script to notify you of which bin to put out this week.
 1. A cronjob runs a php script on bin day
 2. The php script checks today's bin using some pre-prepared JSON data
 3. The php script triggers a Macrodroid Macro with a webhook, passing through the bin data
-4. The Macrodroid macro displays a notification on your phone, showing 
+4. The Macrodroid macro displays a notification on your phone, showing today's bin
 
 
 ## Set up
