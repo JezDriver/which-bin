@@ -1,6 +1,6 @@
 <?php 
 
-$macrodroidDeviceId = file_get_contents('macrodroid-device-id.txt');
+$macrodroidDeviceId = file_get_contents('macrodroid/macrodroid-device-id.txt');
 $dates = json_decode(file_get_contents('data/dates-2023.json'), true);
 
 date_default_timezone_set('Australia/Adelaide');
