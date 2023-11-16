@@ -1,0 +1,2 @@
+0 9 * * Thu php /var/www/scripts/which-bin/which-bin.php
+0 17 * * Thu php /var/www/scripts/which-bin/which-bin.php

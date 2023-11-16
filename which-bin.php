@@ -1,6 +1,7 @@
 <?php 
 
-$dates = json_decode(file_get_contents('dates-2023.json'), true);
+$macrodroidDeviceId = file_get_contents('macrodroid-device-id.txt');
+$dates = json_decode(file_get_contents('data/dates-2023.json'), true);
 
 date_default_timezone_set('Australia/Adelaide');
 $today = date('d/m/Y');
@@ -31,4 +32,4 @@ if($dateFound) {
 else {
   $emoji = "❓";
 }
-echo file_get_contents('https://trigger.macrodroid.com/bb1b07a4-fbec-4696-aac9-5f7bcefe9fb5/whichbin?whichBin=' . $todaysBin . '&binEmoji=' . urlencode($emoji));
+echo file_get_contents('https://trigger.macrodroid.com/' . $macrodroidDeviceId . '/whichbin?whichBin=' . $todaysBin . '&binEmoji=' . urlencode($emoji));
