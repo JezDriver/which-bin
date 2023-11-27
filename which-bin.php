@@ -1,9 +1,11 @@
 <?php 
+$scriptPath = realpath(dirname(__FILE__));
+
 // Get Device ID from file (secrets)
-$macrodroidDeviceId = file_get_contents('macrodroid/macrodroid-device-id.txt');
+$macrodroidDeviceId = file_get_contents($scriptPath . '/macrodroid/macrodroid-device-id.txt');
 
 // Get dates data
-$dates = json_decode(file_get_contents('data/dates-2023.json'), true);
+$dates = json_decode(file_get_contents($scriptPath . '/data/dates-2023.json'), true);
 
 // Get today's date
 date_default_timezone_set('Australia/Adelaide');
